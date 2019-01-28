@@ -25,7 +25,7 @@ Este projeto consiste em um sistema de presença para Evangelização Espírita.
 * Datelhes da Pessoa:\* informando todos os dias em que ele estava presente
 * Deve exibir um relatório no qual contém o resumo de presenças do dia
 * Realizar Testes Unitários
-## Para o futuro
+# Para o futuro
 * Criar usuário e senhas para os Evangelizadores
 * Fazer o controle de acesso
 # Tecnologias
