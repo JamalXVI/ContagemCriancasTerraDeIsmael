@@ -33,7 +33,7 @@ namespace ContagemCriancas.Services.Impl
         {
             //TODO Retornar as presenças filtradas por dia
             List<Presenca> presencas = null;
-            List<OutputPresencaDto> presencaDtos = ConverterUtils.Converter(presencas);
+            List<OutputPresencaDto> presencaDtos = presencas.Converter();
             return presencaDtos;
         }
     }

@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using ContagemCriancas.Dto;
+﻿using ContagemCriancas.Dto;
 using ContagemCriancas.Dto.output;
 using ContagemCriancas.Models;
 using ContagemCriancas.Utils;
+using System.Collections.Generic;
 
 namespace ContagemCriancas.Services.Impl
 {
@@ -12,7 +12,7 @@ namespace ContagemCriancas.Services.Impl
         public string Salvar(TurmaDto turmaDto)
         {
             Turma turma = new Turma();
-            turma.Nome = turmaDto.Nome ;
+            turma.Nome = turmaDto.Nome;
             turma.HorarioFuncionamento = DataUtils.FormartarSomenteHora(turmaDto.Horario);
             turma.DiaDaSemana = turmaDto.DiaDaSemana;
             //TODO Salvar no banco de dados
@@ -23,7 +23,7 @@ namespace ContagemCriancas.Services.Impl
         {
             //TODO retornar todas as turmas, apenas as ativas
             List<Turma> turmas = null;
-            List<TurmaDto> turmasDto = ConverterUtils.Converter(turmas);
+            List<TurmaDto> turmasDto = turmas.Converter();
             return turmasDto;
         }
 
@@ -31,7 +31,7 @@ namespace ContagemCriancas.Services.Impl
         {
             //TODO Encontrar a turma específica pelo Id
             Turma turma = null;
-            OutputTurmaDto turmaDto = ConverterUtils.Converter(turma);
+            OutputTurmaDto turmaDto = turma.Converter();
             return turmaDto;
         }
     }

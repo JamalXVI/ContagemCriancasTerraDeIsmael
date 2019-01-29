@@ -10,13 +10,13 @@ namespace ContagemCriancas.Utils
     {
         #region Métodos Públicos
         #region Pessoa
-        public static List<PessoaDto> Converter(List<Pessoa> pessoas)
+        public static List<PessoaDto> Converter(this List<Pessoa> pessoas)
         {
             List<PessoaDto> pessoasDto = (from pessoa in pessoas select CriarPessoaDto(pessoa)).ToList();
             return pessoasDto;
         }
 
-        public static OutputPessoaDto Converter(Pessoa pessoa)
+        public static OutputPessoaDto Converter(this Pessoa pessoa)
         {
 
             OutputPessoaDto pessoaDto = new OutputPessoaDto();
@@ -28,7 +28,7 @@ namespace ContagemCriancas.Utils
         }
         #endregion
         #region Turma
-        public static OutputTurmaDto Converter(Turma turma)
+        public static OutputTurmaDto Converter(this Turma turma)
         {
             OutputTurmaDto turmaDto = new OutputTurmaDto();
             DefinirComumTurma(turma, turmaDto);
@@ -36,7 +36,7 @@ namespace ContagemCriancas.Utils
             return turmaDto;
         }
 
-        public static List<TurmaDto> Converter(List<Turma> turmas)
+        public static List<TurmaDto> Converter(this List<Turma> turmas)
         {
             List<TurmaDto> turmasDto = (from turma in turmas select CriarTurmaDto(turma)).ToList();
             return turmasDto;
@@ -44,7 +44,7 @@ namespace ContagemCriancas.Utils
         #endregion
         #region Presenca
 
-        public static List<OutputPresencaDto> Converter(List<Presenca> presencas)
+        public static List<OutputPresencaDto> Converter(this List<Presenca> presencas)
         {
             List<OutputPresencaDto> presencasDto = (from presenca in presencas select CriarPresencaDto(presenca)).ToList();
             return presencasDto;

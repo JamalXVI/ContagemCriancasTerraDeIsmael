@@ -30,7 +30,7 @@ namespace ContagemCriancas.Services.Impl
         {
             //TODO Retornar dados salvos do Banco de Dados e ativos
             List<Pessoa> pessoas = null;
-            List<PessoaDto> pessoasDto = ConverterUtils.Converter(pessoas);
+            List<PessoaDto> pessoasDto = pessoas.Converter();
             return pessoasDto;
         }
 
@@ -38,7 +38,7 @@ namespace ContagemCriancas.Services.Impl
         {
             //TODO Retornar dados salvos do Banco de Dados e ativos, filtrados por tipo de pessoa
             List<Pessoa> pessoas = null;
-            List<PessoaDto> pessoasDto = ConverterUtils.Converter(pessoas);
+            List<PessoaDto> pessoasDto = pessoas.Converter();
             return pessoasDto;
         }
         #endregion
@@ -47,7 +47,7 @@ namespace ContagemCriancas.Services.Impl
         {
             //TODO Retornar somente do banco de dados aquele Id
             Pessoa pessoa = null;
-            OutputPessoaDto pessoaDto = ConverterUtils.Converter(pessoa);
+            OutputPessoaDto pessoaDto = pessoa.Converter();
             return pessoaDto;
         }
     }
